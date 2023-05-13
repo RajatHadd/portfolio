@@ -1,0 +1,44 @@
+.experience-card {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(242, 242, 219);
+    box-shadow :5px 5px 15px rgb(61, 61, 1);
+    margin: 1em;
+    padding: 1em;
+    z-index: 2;
+    border-radius: 5%;
+
+    .experience-card-left {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .experience-card-left-container {   
+            background-color: rgb(66, 66, 53);
+            margin-top: 5%;
+            .job-title {
+                font-size: 2rem;
+                color: var(--orange);
+            }
+
+            .job-company-name {
+                font-size: 2rem;
+                color: var(--orange);
+            }
+
+            .job-duration {
+                font-size: 1rem;
+                color: var(--gray);
+            }
+        }
+    }
+
+    .experience-card-right {
+        width: 50%;
+        ul{
+            list-style-type: decimal;
+            color: var(--gray);
+            text-align: left;
+        }
+    }
+}

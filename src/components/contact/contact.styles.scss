@@ -1,0 +1,51 @@
+.wrapper-contact {
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(242, 242, 219) ;
+    box-shadow :5px 5px 15px rgb(90, 88, 9);
+    margin: 1em;
+    padding: 1em;
+    z-index: 2;
+    border-radius: 5%;
+
+    .contact-right {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        flex: 1;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .user {
+            width: 20rem;
+            height: 2rem;
+            padding: 0.3rem;
+            outline: none;
+            border: 2px solid var(--orange);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+    }
+
+    .contact-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .contact-left-container {
+            :nth-child(1) , :nth-child(2){
+                font-size: 4rem;
+                color: var(--yellow);
+            }
+        }
+    }
+}
+
+textarea {
+    height: 4rem;
+}

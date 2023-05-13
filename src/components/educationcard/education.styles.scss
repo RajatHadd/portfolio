@@ -1,0 +1,32 @@
+.wrapper-education-card{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(244, 203, 234);
+    box-shadow :5px 5px 15px rgb(83, 21, 73);
+    margin: 1em;
+    padding: 1em;
+    z-index: 2;
+    border-radius: 5%;
+    .education-card-left{
+            background-color: rgb(66, 30, 69);
+            width: 40%;
+        .education-card-left-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10%;
+            .school-type{
+                font-size: 3rem;
+                color: var(--orange);
+            }
+        }
+    }
+    
+    .education-card-right{
+        width: 50%;
+        font-size: 1.5rem;
+        margin-left: 2rem;
+        text-align: left;
+        
+    }
+}
