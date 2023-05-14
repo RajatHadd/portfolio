@@ -1,5 +1,7 @@
 import JobCard from "../jobcard/jobcard.component";
 import "./experience.styles.scss";
+import { letter, logo, fadeIn } from "../../variants/index";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   const firstJobDescription = [
@@ -35,25 +37,62 @@ const Experience = () => {
     },
   ];
   const secondJobDescription = [
-    {id:1, point: "Campus Navigator - orientation volunteers walk students to and from where they need to go "},
-    {id:2, point : "Welcome Crew - stationed at the main busiest entrances to welcome students, give them their swag bag as well as help direct them to the sessions and marketplace"}
-  ]
+    {
+      id: 1,
+      point:
+        "Campus Navigator - orientation volunteers walk students to and from where they need to go ",
+    },
+    {
+      id: 2,
+      point:
+        "Welcome Crew - stationed at the main busiest entrances to welcome students, give them their swag bag as well as help direct them to the sessions and marketplace",
+    },
+  ];
   return (
     <div className="wrapper-experience">
-      <h1 className="main-experience-heading">Work Experience</h1>
-      <JobCard
-        jobTitle="Regional Systems Officer"
-        jobCompany="Justice Technology Services"
-        startTime="3rd Januay 2023"
-        endTime="30th April 2023"
-        jobDescription={firstJobDescription}
-      />
-      <JobCard 
-        jobTitle="Campus Navigator(Volunteer)"
-        jobCompany="Sheridan College"
-        startTime=""
-        jobDescription={secondJobDescription}
-         />
+      <motion.h1
+        className="main-experience-heading"
+        variants={logo}
+        initial="hidden"
+        whileInView="visible"
+      >
+        {"Work Experience".split("").map((char, index) => {
+          return (
+            <motion.span key={char + "-" + index} variants={letter}>
+              {char}
+            </motion.span>
+          );
+        })}
+      </motion.h1>
+      <motion.div
+        className="job-one"
+        variants={fadeIn("right", 0.5)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <JobCard
+          jobTitle="Regional Systems Officer"
+          jobCompany="Justice Technology Services"
+          startTime="3rd Januay 2023"
+          endTime="30th April 2023"
+          jobDescription={firstJobDescription}
+        />
+      </motion.div>
+      <motion.div
+        variants={fadeIn("left", 0.5)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
+        className="job-two"
+      >
+        <JobCard
+          jobTitle="Campus Navigator(Volunteer)"
+          jobCompany="Sheridan College"
+          startTime=""
+          jobDescription={secondJobDescription}
+        />
+      </motion.div>
     </div>
   );
 };

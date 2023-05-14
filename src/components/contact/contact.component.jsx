@@ -1,4 +1,6 @@
-import './contact.styles.scss'
+import "./contact.styles.scss";
+import { motion } from "framer-motion";
+import { letter, logo, fadeIn } from "../../variants";
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -44,11 +46,33 @@ export default function Contact() {
   };
   return (
     <>
-      <div className="wrapper-contact" id="Contact">
+      <motion.div className="wrapper-contact" id="Contact"
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
+      >
+
         <div className="contact-left">
           <div className="contact-left-container">
-            <div>Get in touch </div>
-            <div> Contact me </div>
+            <motion.div variants={logo} initial="hidden" whileInView="visible">
+              {"Get in Touch".split("").map((char, index) => {
+                return (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                );
+              })}
+            </motion.div>
+            <motion.div variants={logo} initial="hidden" whileInView="visible">
+              {"Contact Me :)".split("").map((char, index) => {
+                return (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                );
+              })}
+            </motion.div>
           </div>
         </div>
         <div className="contact-right">
@@ -80,7 +104,7 @@ export default function Contact() {
             <span>{done && "Thanks for contact me!"} </span>
           </form>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

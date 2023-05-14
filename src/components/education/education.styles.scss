@@ -1,7 +1,4 @@
-.education-heading{
-    font-size: 5rem;
-    color: var(--black);
-}
+
 .wrapper-education{
     display: flex;
     flex-direction: column;
@@ -9,4 +6,8 @@
     font-size: 2rem;
     color: var(--gray);
     text-align: center;
+    .main-education-heading{
+        font-size: 5rem;
+        color: var(--black);
+    }
 }
