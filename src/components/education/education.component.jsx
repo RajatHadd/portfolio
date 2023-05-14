@@ -5,7 +5,7 @@ import {letter, logo, fadeIn } from "../../variants";
 
 const Education = () => {
   return (
-    <div className="wrapper-education">
+    <div className="wrapper-education" id="Education">
       <motion.h1
         className="main-education-heading"
         variants={logo}

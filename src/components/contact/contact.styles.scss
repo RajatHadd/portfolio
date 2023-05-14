@@ -5,13 +5,11 @@
     box-shadow :5px 5px 15px rgb(90, 88, 9);
     margin: 1em;
     padding: 1em;
-    z-index: 2;
     border-radius: 5%;
 
     .contact-right {
         display: flex;
         justify-content: center;
-        position: relative;
         flex: 1;
 
         form {
@@ -29,6 +27,14 @@
             border: 2px solid var(--orange);
             border-radius: 8px;
             font-size: 16px;
+        }
+        .c-button{
+            &:hover {
+                background: white;
+                cursor: pointer;
+                color: var(--orange);
+                border: 1px solid var(--orange);
+            }
         }
     }
 
@@ -48,4 +54,23 @@
 
 textarea {
     height: 4rem;
+}
+@media screen and (max-width:480px){
+    .wrapper-contact{
+        width: auto;
+        gap: 2rem;
+        .contact-left{
+            .contact-left-container{
+                :nth-child(1), :nth-child(2){
+                    font-size: 2rem;
+                }
+            }
+            
+        }
+        .contact-right{
+            .user{
+                width: 10rem;
+            }
+        }
+    }
 }

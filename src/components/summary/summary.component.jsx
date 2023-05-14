@@ -7,7 +7,7 @@ const Summary = () => {
   const line1 =
     "who prioritizes usability and adaptability during projects. Designs sites and apps to attract users with aesthetically pleasing interfaces and exceptional UX elements. Comfortable working within large-scale collaborations or on individually-developed assets.";
   return (
-    <div className="summary-wrapper">
+    <div className="summary-wrapper" id="Home">
       <motion.div
         className="summary-left"
         variants={fadeIn("up", 0.3)}

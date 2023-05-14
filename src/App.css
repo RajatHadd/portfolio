@@ -14,8 +14,11 @@
   font-family: 'Lato', sans-serif;
   text-align: center;
   padding: 0.5rem 3.5rem;
-  overflow-x: hidden;
+  overflow: hidden;
   color: var(--black);
+}
+body{
+  margin: 0;
 }
 .button {
   border-radius: 34px;

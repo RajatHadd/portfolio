@@ -19,7 +19,7 @@ const JobCard = (props) => {
           <div className="job-title">{jobTitle}</div>
           <div className="job-company-name"> {jobCompany} </div>
             {hasDuration ?
-            <div className="job-duration"> <span>{startTime}</span> <span>{endTime}</span></div> : ''}
+            <div className="job-duration"> <span>{startTime}</span> - <span>{endTime}</span></div> : ''}
           </div>
         
       </div>

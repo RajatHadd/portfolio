@@ -41,3 +41,32 @@
         }
     }
 }
+@media screen and (max-width: 480px) {
+   .summary-wrapper{
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 8rem;
+    .summary-left{
+        width:auto;
+        padding: 0;
+        #line1, #line2,#line3 {
+            font-size: 2.5rem;
+        }
+        #line4{
+            font-size: 1rem;
+        }
+    }
+    .summary-right{
+        width: auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            box-shadow :5px 5px 15px rgb(4, 4, 4);
+            margin: 0;
+            padding: 0;
+        }
+    }
+   }
+}

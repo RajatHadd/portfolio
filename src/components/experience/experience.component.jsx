@@ -49,7 +49,7 @@ const Experience = () => {
     },
   ];
   return (
-    <div className="wrapper-experience">
+    <div className="wrapper-experience" id="Experience">
       <motion.h1
         className="main-experience-heading"
         variants={logo}

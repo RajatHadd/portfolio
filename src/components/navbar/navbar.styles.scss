@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit&display=swap');
 .n-wrapper {
     width: 100%;
     display: flex;
@@ -7,6 +8,7 @@
     left: 0;
     z-index: 3;
     background-color: lightyellow;
+
     .n-left {
         flex: 1;
         align-items: center;
@@ -15,12 +17,19 @@
 
         .n-name {
             font-size: 3rem;
-            font-weight: normal;
+            font-weight: 700;
         }
     }
-    .n-button{
+
+    .n-button {
         margin: 1rem;
-        
+
+        &:hover {
+            background: white;
+            cursor: pointer;
+            color: var(--orange);
+            border: 1px solid var(--orange);
+        }
     }
 
     .n-right {
@@ -29,22 +38,47 @@
         align-items: center;
         justify-content: center;
         font-weight: normal;
-    }
 
-    .n-list {
-        flex: 10;
+        .n-list {
+            flex: 10;
 
-        ul {
-            display: flex;
-            gap: 2rem;
-            margin-right: 4rem;
-            list-style-type: none;
-            cursor: pointer;
-
-            li:hover {
+            ul {
+                display: flex;
+                gap: 2rem;
+                margin-right: 4rem;
+                list-style-type: none;
                 cursor: pointer;
-                color: var(--orange);
+
+                li:hover {
+                    cursor: pointer;
+                    color: var(--orange);
+                }
             }
         }
     }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .n-wrapper {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        .n-right {
+            .n-list {
+                display: none;
+            }
+
+            .n-button {
+                display: none;
+            }
+        }
+        .n-left{
+            .n-name{
+                font-size: 1.5rem;
+            }
+        }
+    }
+
 }

@@ -5,7 +5,7 @@ import { letter, logo, fadeIn } from "../../variants";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-export default function Contact() {
+const Contact = () => {
   const form = useRef();
   const [field1, setField1] = useState("");
   const [field2, setField2] = useState("");
@@ -21,12 +21,13 @@ export default function Contact() {
     setField3(e.target.value);
   };
   const [done, setDone] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_osdl7xa",
+        "service_ftmzdyb",
         "template_h5nhqdj",
         form.current,
         "8WlImGVMZxBNHsfbt"
@@ -76,7 +77,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="contact-right">
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={form} >
             <input
               type="text"
               name="user_name"
@@ -100,11 +101,13 @@ export default function Contact() {
               onChange={handleUserInput3}
               value={field3}
             />
-            <input type="submit" value="Send" className="button" />
-            <span>{done && "Thanks for contact me!"} </span>
+            <input type="submit" onClick={sendEmail} value="Send" className="button c-button" />
+            <span>{done && "Thanks for contacting me!"} </span>
           </form>
         </div>
       </motion.div>
     </>
   );
 }
+
+export default Contact;

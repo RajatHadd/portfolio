@@ -9,3 +9,10 @@
         color: var(--black);
     }
 }
+@media screen and (max-width: 480px) {
+    .wrapper-experience{
+        .main-experience-heading{
+            font-size: 3rem;
+        }
+    }
+}
