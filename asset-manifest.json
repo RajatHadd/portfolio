@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.365abae1.css",
-    "main.js": "/portfolio/static/js/main.b64f3aaf.js",
+    "main.css": "/portfolio/static/css/main.30513267.css",
+    "main.js": "/portfolio/static/js/main.484ddc54.js",
     "static/media/rajat.jpg": "/portfolio/static/media/rajat.47e9bcbd9fdc07e6c250.jpg",
     "index.html": "/portfolio/index.html",
-    "main.365abae1.css.map": "/portfolio/static/css/main.365abae1.css.map",
-    "main.b64f3aaf.js.map": "/portfolio/static/js/main.b64f3aaf.js.map"
+    "main.30513267.css.map": "/portfolio/static/css/main.30513267.css.map",
+    "main.484ddc54.js.map": "/portfolio/static/js/main.484ddc54.js.map"
   },
   "entrypoints": [
-    "static/css/main.365abae1.css",
-    "static/js/main.b64f3aaf.js"
+    "static/css/main.30513267.css",
+    "static/js/main.484ddc54.js"
   ]
 }
