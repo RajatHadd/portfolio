@@ -2,8 +2,12 @@ import "./education.styles.scss";
 import EducationCard from "../educationcard/educationcard.component";
 import {motion} from "framer-motion"
 import {letter, logo, fadeIn } from "../../variants";
+import { useContext } from "react";
+import { themeContext } from "../../contexts/themecontext";
 
 const Education = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="wrapper-education" id="Education">
       <motion.h1
@@ -11,6 +15,7 @@ const Education = () => {
         variants={logo}
         initial="hidden"
         whileInView="visible"
+        style={{color : darkMode ? 'white' : ''}}
       >
         {"Education".split("").map((char, index) => {
           return (

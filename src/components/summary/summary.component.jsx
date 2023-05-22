@@ -3,9 +3,14 @@ import rajatImage from "../../assets/rajat.jpg";
 import { TypeAnimation } from "react-type-animation";
 import { fadeIn, letter, sentence } from "../../variants";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { themeContext } from "../../contexts/themecontext";
+
 const Summary = () => {
   const line1 =
     "who prioritizes usability and adaptability during projects. Designs sites and apps to attract users with aesthetically pleasing interfaces and exceptional UX elements. Comfortable working within large-scale collaborations or on individually-developed assets.";
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="summary-wrapper" id="Home">
       <motion.div
@@ -16,14 +21,9 @@ const Summary = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         <span id="line1">Hi, I'm </span>
-        <span id="line2">Rajat Saini,</span>
+        <span id="line2" style={{color: darkMode ? 'white' : ''}}>Rajat Saini,</span>
         <span id="line3">
-          <TypeAnimation
-            sequence={["React Developer", 10000, "", 1000]}
-            speed={50}
-            className="text-accent"
-            repeat={Infinity}
-          />
+          Web Developer
         </span>
 
         <motion.div

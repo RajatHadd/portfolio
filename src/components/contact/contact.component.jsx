@@ -2,8 +2,9 @@ import "./contact.styles.scss";
 import { motion } from "framer-motion";
 import { letter, logo, fadeIn } from "../../variants";
 
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { themeContext } from "../../contexts/themecontext";
 
 const Contact = () => {
   const form = useRef();
@@ -45,6 +46,9 @@ const Contact = () => {
         }
       );
   };
+
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <>
       <motion.div className="wrapper-contact" id="Contact"
@@ -102,7 +106,7 @@ const Contact = () => {
               value={field3}
             />
             <input type="submit" onClick={sendEmail} value="Send" className="button c-button" />
-            <span>{done && "Thanks for contacting me!"} </span>
+            <span style={{color : darkMode ? 'black': ''}}>{done && "Thanks for contacting me!"} </span>
           </form>
         </div>
       </motion.div>

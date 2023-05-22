@@ -2,8 +2,14 @@ import JobCard from "../jobcard/jobcard.component";
 import "./experience.styles.scss";
 import { letter, logo, fadeIn } from "../../variants/index";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { themeContext } from "../../contexts/themecontext";
+
+
 
 const Experience = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   const firstJobDescription = [
     {
       id: 1,
@@ -52,6 +58,7 @@ const Experience = () => {
     <div className="wrapper-experience" id="Experience">
       <motion.h1
         className="main-experience-heading"
+        style={{color: darkMode ? 'white' : ''}}
         variants={logo}
         initial="hidden"
         whileInView="visible"
